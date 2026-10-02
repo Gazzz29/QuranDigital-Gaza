@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran PESAT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-mark">Q</span>
+          <div>
+            <p class="brand-name">Quran PESAT</p>
+            <p class="brand-tag">Belajar Al-Qur'an sambil murajaah</p>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <button class="nav-btn active" data-tab="quran" type="button">Al-Qur’an</button>
+          <button class="nav-btn" data-tab="mentor" type="button">Mentor Murajaah</button>
+        </nav>
+      </header>
+
+      <main class="content-area">
+        <section id="quran-panel" class="panel active" aria-label="Al-Qur'an panel">
+          <div id="quranStatus" class="status status-loading" aria-live="polite"></div>
+
+          <div class="surat-layout">
+            <aside class="surat-sidebar">
+              <div class="section-header">
+                <h2>Daftar Surat</h2>
+              </div>
+              <div id="suratList" class="surat-list" aria-live="polite"></div>
+            </aside>
+
+            <section class="surat-detail-panel">
+              <div id="suratDetail" class="surat-detail empty">
+                <p>Pilih surat untuk melihat ayat.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="mentor-panel" class="panel" aria-label="Mentor Murajaah panel">
+          <div id="mentorStatus" class="status" aria-live="polite"></div>
+
+          <div class="mentor-header">
+            <div class="mode-toggle" aria-label="Mode mentor">
+              <button class="mode-btn active" data-mode="tebak" type="button">Tebak Ayat</button>
+              <button class="mode-btn" data-mode="sambung" type="button">Sambung Ayat</button>
+            </div>
+            <div class="score-badge">
+              <span>Skor</span>
+              <strong id="scoreValue">0</strong>
+            </div>
+          </div>
+
+          <div id="mentorContent" class="mentor-content"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
